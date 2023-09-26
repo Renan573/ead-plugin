@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Página Teste
+        </title>
+        <script>
+            fetch('file:///home/linovacao/Desktop/downloads-renan/sites/ead-plugin/index.php', {mode: 'no-cors'})
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                }) 
+                .catch(error => {
+                    console.log(error);
+                });
+
+        </script>
+    </head>
+    <body>
+        <h1>
+            Cursos carregados
+        </h1>
+    </body>
+</html>
