@@ -1,9 +1,9 @@
 <?php
 
     function getJSONFile($endpoint = '') {
-        $url = 'https://api.sympla.com.br/public/v3/events';
+        $url = 'https://api.sympla.com.br/public/v3/events' . $endpoint;
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url . $endpoint);
+        curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
         curl_setopt($ch, CURLOPT_HTTPHEADER, [

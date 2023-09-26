@@ -5,16 +5,19 @@
         <title>
             Página Teste
         </title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            fetch('file:///home/linovacao/Desktop/downloads-renan/sites/ead-plugin/index.php', {mode: 'no-cors'})
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                }) 
-                .catch(error => {
-                    console.log(error);
-                });
-
+            $.ajax({
+                url: 'https://api.sympla.com.br/public/v4/events',
+                crossDomain: true,
+                headers: {
+                    's_token': '13cbe49b9403e5a4fadfa7da0c81987308e86459b3a63e237b193debe9180d9e'
+                }
+            }).done(function(response) {
+              console.log(response);
+            }).fail(function() {
+              console.log("Error");
+            });
         </script>
     </head>
     <body>
